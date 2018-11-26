@@ -19,7 +19,9 @@ cd ${BASE_DIR}
 #rm -rf "${LOG_DIR}"
 
 #echo "Pulling Latest code from git"
+#git pull
 git pull origin for_bharat
+
 git diff --name-only | grep -E '.env.example'
 ret_code=$?
 if [ $ret_code == 0 ]; then
